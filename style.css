@@ -1,0 +1,71 @@
+:root {
+    --hue: 200;
+    --saturation: 50%;
+    --foreground-color: hsl(var(--hue), var(--saturation), 75%);
+    --background-color: hsl(var(--hue), var(--saturation), 20%);
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+  }
+  
+  #container {
+    position: relative;
+    background-color: red; /* change to the desired color */
+    outline: none;
+  }
+  
+  #ball {
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    border-radius: 50%;
+    background-color: brown;
+    left: 60%;
+    top: 20px;
+  }
+  
+  #bar-1 {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    background-color: var(--foreground-color);
+    border-radius: 20px;
+    position: fixed;
+    font-weight: bold;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+  
+  #bar-2 {
+    height: 20px;
+    width: 150px;
+    background-color: var(--foreground-color);
+    border-radius: 20px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+  
+  #net {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: none;
+    border-bottom: none;
+  }
+  
